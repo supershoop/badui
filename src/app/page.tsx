@@ -97,7 +97,7 @@ export default function Home() {
   }, [angle, read, moving, page, loadText]);
 
   const scrollHandler: UIEventHandler<HTMLDivElement> = e => {
-      const tolerance = 1; 
+      const tolerance = 5; 
       const element = e.target as HTMLDivElement;
       if ((element.scrollTop + element.clientHeight + tolerance) >= element.scrollHeight) {
         setRead(!loadText);
